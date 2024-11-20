@@ -6,4 +6,6 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello from Mock PaaS</h1>');
 });
 
+console.log("배성빈 멍청")
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
