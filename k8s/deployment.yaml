@@ -1,0 +1,20 @@
+# 길드본부 : 퀘스트 계획. 파티 관리
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yaho
+spec:
+  replicas: 1 # pod 수
+  selector: # yaho 라벨을 가진 pod 를 관리한다.
+    matchLabels:
+      app: yaho
+  template: # pod 설정
+    metadata: # pod 이름 설정
+      labels: # pod 라벨 설정
+        app: yaho
+    spec:
+      containers:
+      - name: yaho
+        image: moonhr/yaho:latest
+        ports:
+        - containerPort: 3000
